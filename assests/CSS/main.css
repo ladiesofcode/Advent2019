@@ -8,3 +8,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+a {
+  color: #209118;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #145b0f;
+}
