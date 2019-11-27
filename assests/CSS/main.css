@@ -59,8 +59,8 @@ ul#adventDoors {
 }
 
 #adventDoors li a.disabled {
-  border-color: red;
-  background-color: rgba(196,254,171,0.15);
-  color: #b6fe98;
+  border-color: crimson;
+  background-color: rgba(220,20,60,0.02);
+  color: #crimson;
   cursor: default;
 }

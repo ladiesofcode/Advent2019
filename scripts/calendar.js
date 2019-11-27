@@ -20,10 +20,10 @@ function Door(calendar, day) {
     innerNode.href = '#';
 
     if( (currentDate.getMonth() + 1) < 12 || currentDate.getDate() < day) {
-      // innerNode.className = 'disabled';
-      // innerNode.onclick = function() {
-      //   return false;
-      // }
+      innerNode.className = 'disabled';
+      innerNode.onclick = function() {
+        return false;
+      }
     } else {
       var adventMessage = this.adventMessage;
       innerNode.onclick = function(){
