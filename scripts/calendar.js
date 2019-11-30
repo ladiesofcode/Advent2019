@@ -4,7 +4,7 @@ var currentDate = new Date();
 function Door(calendar, day) {
   this.width = ((calendar.width - 0.1 * calendar.width) / 6) * 0.95;
   this.height = ((calendar.height - 0.1 * calendar.height) / 4) * 0.95;
-  this.adventMessage = 'Day ' + day + ' of Ladies of Code Advent:' + '"' + messages[day - 1][0] + '"\n\n\t' + 'by ' + messages[day - 1][1] + '\n\n';
+  this.adventMessage = 'Day ' + day + ' of Ladies of Code Advent: \n\n' + messages[day - 1][0] + '\n\n\t' + 'by ' + messages[day - 1][1] + '\n\n';
   this.x = (0.04 * calendar.width + ((day - 1) % 6) * (1.1 * this.width));
   this.y = -(0.96 * calendar.height - Math.floor((day - 1) / 6) * (1.1 * this.height));
 
@@ -17,7 +17,7 @@ function Door(calendar, day) {
     var innerNode = document.createElement('a');
     document.getElementById('door' + day).appendChild(innerNode);
     innerNode.innerHTML = day;
-    innerNode.href = '#';
+    innerNode.href = 'http://www.google.com';
 
     if( (currentDate.getMonth() + 1) < 12 || currentDate.getDate() < day) {
       innerNode.className = 'disabled';
@@ -27,7 +27,8 @@ function Door(calendar, day) {
     } else {
       var adventMessage = this.adventMessage;
       innerNode.onclick = function(){
-        alert(adventMessage);
+        confirm(adventMessage);
+        window.location.href = messages[day - 1][2];
         return false;
       }
     }
