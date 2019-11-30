@@ -1,12 +1,18 @@
 html,
 body {
-  font-size: 10px;
+  font-size: 1em;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url('../images/background2.jpg');
+  background-size: cover;
+}
+
+p {
+  margin-right: 10px;
 }
 
 a {
@@ -16,4 +22,64 @@ a {
 
 a:hover {
   color: #145b0f;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+  color: #000;
+}
+
+#footer, #header {
+  display: flex;
+  align-items: center;
+  margin-left: 3.2rem;
+}
+
+#footer {
+  text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
+}
+
+#logo {
+  height: 100px;
+  margin-right: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+ul#adventDoors {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#adventDoors li {
+  position: absolute;
+}
+
+#adventDoors li a {
+  color: #000;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px #000 solid;
+}
+
+#adventDoors li a:not(.disabled):hover {
+  color: crimson;
+  background-color: transparent;
+  background-color: rgba(255,255,255,0.15);
+  border: 1px crimson solid;
+}
+
+#adventDoors li a.disabled {
+  border-color: lightgrey;
+  background-color: rgba(211,211,211,0.02);
+  color: #lightgrey;
+  cursor: default;
 }
